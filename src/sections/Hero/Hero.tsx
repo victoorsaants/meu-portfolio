@@ -17,12 +17,12 @@ export default function Hero() {
             Olá, eu sou{' '}
             <span className="hero__title-name">João Victor</span>
             <br />
-            <span className="hero__title-role">Desenvolvedor Full Stack</span>
+            <span className="hero__title-role">Desenvolvedor Júnior</span>
           </h1>
 
           <p className="hero__desc">
-            Construo interfaces modernas e sistemas robustos com foco em
-            performance, acessibilidade e experiência do usuário.
+            Desenvolvedor Júnior ganhando experiência em desenvolvimento de RPA,
+            buscando oportunidades para crescer e contribuir para projetos inovadores.
           </p>
 
           <div className="hero__actions">
@@ -41,26 +41,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual" aria-hidden="true">
-          <div className="hero__code-card">
-            <div className="hero__code-header">
-              <span className="hero__code-dot hero__code-dot--red" />
-              <span className="hero__code-dot hero__code-dot--yellow" />
-              <span className="hero__code-dot hero__code-dot--green" />
-              <span className="hero__code-filename">portfolio.ts</span>
-            </div>
-            <pre className="hero__code-body"><code>{`const developer = {
-  name: "João Victor",
-  role: "Full Stack Dev",
-  stack: [
-    "TypeScript",
-    "React",
-    "Node.js",
-  ],
-  available: true,
-}`}</code></pre>
-          </div>
-        </div>
       </div>
 
       <div className="hero__scroll-hint">

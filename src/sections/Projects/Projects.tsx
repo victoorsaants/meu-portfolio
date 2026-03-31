@@ -10,19 +10,20 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: 'Projeto Alpha',
+    title: 'Sistema Join',
     description:
-      'Aplicação web completa com autenticação, dashboard e integração com APIs externas. Construída com React, Node.js e PostgreSQL.',
-    tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/',
+      'Sistema de adição e remoção de dashboards com login e senha, frontend feito em HTML, CSS e JavaScript, backend feito em Python com FastAPI.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    github: 'https://github.com/victoorsaants/Sistema-Join',
+    demo: 'https://sistema-join.onrender.com',
   },
   {
-    title: 'Projeto Beta',
+    title: 'Landing Page Join',
     description:
-      'CLI para automação de tarefas de desenvolvimento. Reduz tempo de setup de novos projetos em até 80%.',
-    tech: ['Python', 'CLI', 'Docker'],
-    github: 'https://github.com/',
+      'Landing Page feita para venda de e-book da empresa, página feita com HTML, CSS e JavaScript.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/victoorsaants/Join',
+    demo: 'https://join-sigma.vercel.app/',
   },
   {
     title: 'Projeto Gamma',
