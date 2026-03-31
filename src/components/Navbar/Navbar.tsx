@@ -7,8 +7,7 @@ const NAV_LINKS = [
   { label: 'Sobre',    to: '/',        hash: '#about'    },
   { label: 'Skills',   to: '/',        hash: '#skills'   },
   { label: 'Projetos', to: '/',        hash: '#projects' },
-  { label: 'Blog',     to: '/blog',    hash: ''          },
-  { label: 'Contato',  to: '/',        hash: '#contact'  },
+{ label: 'Contato',  to: '/',        hash: '#contact'  },
 ]
 
 export default function Navbar() {
