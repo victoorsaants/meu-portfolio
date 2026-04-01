@@ -1,11 +1,5 @@
 import './About.css'
 
-const HIGHLIGHTS = [
-  { value: '3+',  label: 'Anos de experiência' },
-  { value: '20+', label: 'Projetos entregues'   },
-  { value: '10+', label: 'Tecnologias'          },
-]
-
 export default function About() {
   return (
     <section className="about section" id="about">
@@ -16,7 +10,7 @@ export default function About() {
           <p className="section-subtitle">
             Desenvolvedor apaixonado por criar soluções que unem boa engenharia
             com experiências visuais marcantes. Gosto de trabalhar em toda a
-            stack — do banco de dados à interface final.
+            stack do banco de dados à interface final.
           </p>
           <p className="about__text">
             Tenho foco em código limpo, performance e acessibilidade. Quando não
@@ -30,15 +24,6 @@ export default function About() {
               Download CV
             </a>
           </div>
-        </div>
-
-        <div className="about__stats">
-          {HIGHLIGHTS.map(({ value, label }) => (
-            <div key={label} className="about__stat card">
-              <span className="about__stat-value">{value}</span>
-              <span className="about__stat-label">{label}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>

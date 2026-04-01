@@ -5,62 +5,125 @@
   margin-top: var(--space-12);
 }
 
+/* Card */
 .project-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image / Placeholder */
+.project-card__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.04);
+}
+
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-elevated) 0%, #0f0f1a 100%);
+}
+
+.project-card__placeholder-icon {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-border-blue);
+  opacity: 0.5;
+}
+
+/* Overlay */
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.78);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__overlay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  transform: translateY(6px);
+}
+
+.project-card:hover .project-card__overlay-btn {
+  transform: translateY(0);
+}
+
+.project-card__overlay-btn--demo {
+  background: var(--color-blue-primary);
+  color: var(--color-white);
+  border: 1px solid transparent;
+  transition: background var(--transition-fast), transform var(--transition-normal);
+}
+
+.project-card__overlay-btn--demo:hover {
+  background: var(--color-blue-light);
+}
+
+.project-card__overlay-btn--code {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-normal);
+}
+
+.project-card__overlay-btn--code:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Body */
+.project-card__body {
   padding: var(--space-6);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
-}
-
-.project-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.project-card__icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-blue-subtle);
-  border: 1px solid var(--color-border-blue);
-  border-radius: var(--radius-md);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-blue-light);
-}
-
-.project-card__links {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.project-card__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  transition: all var(--transition-fast);
-}
-
-.project-card__link:hover {
-  border-color: var(--color-border-blue);
-  color: var(--color-blue-light);
-  background: var(--color-blue-subtle);
+  gap: var(--space-3);
+  flex: 1;
 }
 
 .project-card__title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-white);
 }
@@ -76,8 +139,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  margin-top: var(--space-2);
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
 }

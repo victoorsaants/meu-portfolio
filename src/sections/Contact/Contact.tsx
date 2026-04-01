@@ -22,18 +22,18 @@ export default function Contact() {
           </p>
 
           <div className="contact__channels">
-            <a href="mailto:seuemail@exemplo.com" className="contact__channel">
+            <a href="mailto:dev.victor77@gmail.com" className="contact__channel">
               <span className="contact__channel-icon">@</span>
               <div>
                 <span className="contact__channel-label">E-mail</span>
-                <span className="contact__channel-value">seuemail@exemplo.com</span>
+                <span className="contact__channel-value"></span>
               </div>
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="contact__channel">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-18b214326/" target="_blank" rel="noopener noreferrer" className="contact__channel">
               <span className="contact__channel-icon">in</span>
               <div>
                 <span className="contact__channel-label">LinkedIn</span>
-                <span className="contact__channel-value">/in/joaovictor</span>
+                <span className="contact__channel-value"></span>
               </div>
             </a>
           </div>

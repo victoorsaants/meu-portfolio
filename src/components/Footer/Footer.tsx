@@ -1,8 +1,8 @@
 import './Footer.css'
 
 const SOCIALS = [
-  { label: 'GitHub',   href: 'https://github.com/', icon: 'GH' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/', icon: 'in' },
+  { label: 'GitHub', href: 'https://github.com/victoorsaants', icon: 'GH' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jo%C3%A3o-victor-18b214326/', icon: 'in' },
 ]
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <p className="footer__copy">
           <span className="footer__copy-bracket">{'<'}</span>
-          feito com React + TypeScript
+          feito por João Victor
           <span className="footer__copy-bracket">{'/>'}</span>
           <span className="footer__year"> — {year}</span>
         </p>

@@ -4,6 +4,7 @@ interface Project {
   title: string
   description: string
   tech: string[]
+  image?: string
   github?: string
   demo?: string
 }
@@ -46,34 +47,60 @@ export default function Projects() {
         </p>
 
         <div className="projects__grid">
-          {PROJECTS.map(({ title, description, tech, github, demo }) => (
+          {PROJECTS.map(({ title, description, tech, image, github, demo }) => (
             <article key={title} className="project-card card">
-              <div className="project-card__top">
-                <div className="project-card__icon">
-                  <span>{'{ }'}</span>
-                </div>
-                <div className="project-card__links">
-                  {github && (
-                    <a href={github} target="_blank" rel="noopener noreferrer"
-                      className="project-card__link" aria-label="GitHub">
-                      GH
-                    </a>
-                  )}
+
+              <div className="project-card__image-wrap">
+                {image ? (
+                  <img src={image} alt={title} className="project-card__image" />
+                ) : (
+                  <div className="project-card__placeholder" aria-hidden="true">
+                    <span className="project-card__placeholder-icon">{'{ }'}</span>
+                  </div>
+                )}
+
+                <div className="project-card__overlay">
                   {demo && (
-                    <a href={demo} target="_blank" rel="noopener noreferrer"
-                      className="project-card__link" aria-label="Demo">
-                      ↗
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-card__overlay-btn project-card__overlay-btn--demo"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
+                      </svg>
+                      Demo
+                    </a>
+                  )}
+                  {github && (
+                    <a
+                      href={github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-card__overlay-btn project-card__overlay-btn--code"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                      </svg>
+                      Código
                     </a>
                   )}
                 </div>
               </div>
 
-              <h3 className="project-card__title">{title}</h3>
-              <p className="project-card__desc">{description}</p>
-
-              <div className="project-card__tech">
-                {tech.map(t => <span key={t} className="tag">{t}</span>)}
+              <div className="project-card__body">
+                <h3 className="project-card__title">{title}</h3>
+                <p className="project-card__desc">{description}</p>
+                <div className="project-card__tech">
+                  {tech.map(t => <span key={t} className="tag">{t}</span>)}
+                </div>
               </div>
+
             </article>
           ))}
         </div>

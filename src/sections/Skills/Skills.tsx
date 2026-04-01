@@ -3,15 +3,15 @@ import './Skills.css'
 const SKILL_GROUPS = [
   {
     category: 'Frontend',
-    skills: ['TypeScript', 'React', 'CSS', 'HTML5', 'Vite'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'],
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Python', 'REST API', 'PostgreSQL', 'MongoDB'],
+    skills: ['Python', 'FastAPI', 'Java', 'PostgreSQL'],
   },
   {
     category: 'Ferramentas',
-    skills: ['Git', 'Docker', 'Linux', 'GitHub Actions', 'VS Code'],
+    skills: ['Git', 'GitHub', 'Antigravity'],
   },
 ]
 
